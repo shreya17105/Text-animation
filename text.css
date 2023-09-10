@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=News+Cycle:wght@700&family=Open+Sans:wght@300&family=Oswald:wght@200&family=Roboto+Slab:wght@700&family=Roboto:ital,wght@0,700;1,100&display=swap');
+
+  span
+  {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 4rem;
+}
+section{
+    background-color: rosybrown;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items:center;
+    justify-content: center
+}
+.one{
+    padding:0px 15px;
+}
+.one::before{
+    content: "";
+   
+    width: 268px;
+    height: 79px;
+    background: rosybrown;
+    position:absolute;
+    z-index: 1;
+    animation: show 3s steps(7) 0.1s  backwards;
+}
+@keyframes show 
+{
+    0%{
+        transform: translateX(0px);
+        border-left: 2px solid rgb(105, 81, 81);
+    }
+    100%{
+        transform: translateX(268px);
+        border-left:0.1px;
+    }
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    transform: translateY(37px);
+ animation: twos 0.1s steps(5) 3s   forwards ;
+}
+@keyframes twos {
+    0%
+    {
+        transform: translateY(37px);
+    }
+    100%{
+        transform: translateY(-42px);
+    }
+}
+.two{
+    padding:0px 15px;
+}
+.two::before{
+    content: "";
+    /* border-left: 2px solid rgb(105, 81, 81); */
+    width: 208px;
+    height: 79px;
+    background: rosybrown;
+    position:absolute;
+    z-index: 1;
+    animation: showt 3s steps(6) 3.2s  backwards;
+}
+@keyframes showt {
+    0%{
+        transform: translateX(0px);
+    }
+    1%{
+        border-left: 2px solid rgb(105, 81, 81);
+    }
+    100%{
+        transform: translateX(208px);
+        border-left: 0px;
+    }
+}
+.three{
+    font-family: 'Luckiest Guy', cursive;
+    padding:0px 15px;
+    animation: thre 0.1s ease-in forwards;
+    animation-delay: 6.5s ;
+    font-size: 4rem;
+    visibility: hidden;
+    text-shadow: 2px 5px 15px black;
+}
+@keyframes thre {
+0%{
+    transform: translateX(0px);
+  
+}
+/* 50%{
+    visibility: hidden;
+} */
+   100%{
+transform: translateX(-251px);
+visibility: visible;
+   } 
+}
+*{
+    margin: 0;
+    padding: 0;
+}
